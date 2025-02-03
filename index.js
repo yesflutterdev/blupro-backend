@@ -20,7 +20,7 @@ const io = new Server(httpServer, {
   }
 });
 
-const PORT = process.env.PORT || 4000;
+
 
 // Middleware
 app.use(cors());
@@ -76,7 +76,4 @@ io.on("connection", (socket) => {
   });
 });
 
-// Change app.listen to httpServer.listen
-httpServer.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+module.exports = app;
