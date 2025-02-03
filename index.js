@@ -15,8 +15,9 @@ const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: "*", // Be more specific in production
-    methods: ["GET", "POST"]
+    origin: "https://blupro-backend-xdxtnew.vercel.app", // Update with your front-end domain
+    methods: ["GET", "POST"],
+    
   }
 });
 
